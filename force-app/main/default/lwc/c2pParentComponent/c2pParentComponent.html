@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child To Parent Communication: Simple Event">
+        <div class="slds-var-m-around_medium" onclose={closingHandler} >
+            <lightning-button label="Show Modal" onclick={clickHandler}></lightning-button>
+            <h1>{message}</h1>
+            <template if:true={showModal}>
+                <c-c2p-modal-component>
+                <!-- onclose={closingHandler} //to show bubbling, this method has been written on the parent div tag above -->
+                </c-c2p-modal-component>
+            </template>
+        </div>
+    </lightning-card>
+</template>

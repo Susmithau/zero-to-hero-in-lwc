@@ -1,0 +1,16 @@
+:host{ /*applies css to h1 of child*/
+    border-style: dashed;
+}
+
+/*If there are 2 child classes, give a class name to child classes and use as below*/
+/*<c-css-child-demo2 class="childTwo"></c-css-child-demo2>*/
+:host(.childTwo){
+    background-color: blanchedalmond;
+    color: indianred;
+}
+
+/*The below css won't be applied to p tags of child-> only possible from parent
+p{
+    background-color: skyblue;
+}
+*/

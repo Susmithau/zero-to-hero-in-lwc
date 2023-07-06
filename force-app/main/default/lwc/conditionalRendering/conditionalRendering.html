@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class = "slds-var-m-around_small">
+            <lightning-button variant="brand-outline" label="Show Data" title="Show Data" onclick={handleClick} class="slds-var-m-left_x-small">
+            </lightning-button>
+
+            <!-- New release has the directives- 
+                lwc:if = if:true (old)
+                lwc:elseif 
+                lwc:else = if:false (old) -->
+           <template if:true={isVisible}>
+                <div>
+                    <strong>Let's learn the concept of Conditional Rendering in   LWC!
+                    </strong>
+                    <pre>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis molestiae fuga placeat natus corporis voluptatem iusto. Vitae itaque illum eaque ab odio incidunt quam suscipit impedit, necessitatibus explicabo culpa aspernatur consequatur sequi, animi natus magnam fugit minima, perspiciatis officia nostrum numquam. Excepturi, totam. Ad cumque maxime odit, impedit sint facere. Totam obcaecati minima earum reiciendis dolore deleniti perspiciatis voluptatum nihil, laboriosam atque neque similique dolores commodi aliquam unde qui ipsam cum cumque eum accusamus rerum, ducimus facilis incidunt! Eveniet ipsum iste modi cumque nostrum delectus cum qui tenetur doloremque repellendus. Error enim velit neque doloremque itaque! Maxime, saepe adipisci. Ipsam.
+                    </pre>
+                </div>
+            </template>
+            
+            <template if:false={isVisible}>
+                <div>You cannot see me! Please click the above button!
+                </div>
+            </template>
+
+            <lightning-input  type="text" label = "Type hello to see the data:" onkeyup= {changeHandler}></lightning-input>
+            <template if:true = {helloText}>
+                <div>Awesome, you have typed correctly!</div>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

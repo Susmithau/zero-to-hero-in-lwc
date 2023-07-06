@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Template Looping on simple Array --> for:each">
+        <div class="slds-var-m-around_small">
+            <template for:each ={programmingLanguages} for:item = "language">
+                <ul class="slds-has-dividers_around" key = {language}>
+                    <li class="slds-item slds-var-p-around_small">{language}</li>
+                </ul>
+            </template>              
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Template Looping on Array of Objects --> for:each">
+        <div class="slds-var-m-around_small">
+            <template for:each ={employeeList} for:item = "emp">
+                <ul class="slds-has-dividers_around" key = {emp.id}>
+                    <li class="slds-item slds-var-p-around_small">{emp.eName}
+                        {emp.eSal}
+                    </li>
+                </ul>
+            </template>              
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Template Looping --> iterator">
+        <div class="slds-var-m-around_small">
+            <template iterator:employee={employeeList}>
+                <div key={employee.value.eid} >
+                    <ul class="slds-has-dividers_around" >
+                        <template if:true ={employee.first}>
+                            <div class ="slds-box slds-theme_shade slds-theme_alert-texture" >
+                                <strong>Employees of the year!</strong>
+                            </div>
+                        </template>
+                        <li class="slds-item slds-var-p-around_small">
+                        <strong> {employee.value.eName} </strong>
+                        {employee.value.eSal}
+                        </li>
+                        <template if:true ={employee.last}>
+                            <div class ="slds-box slds-theme_shade slds-theme_alert-texture" >
+                                <strong>Congratulations!</strong>
+                            </div>
+                        </template>
+                    </ul>
+                </div>
+            </template>              
+        </div>
+    </lightning-card>
+    
+</template>

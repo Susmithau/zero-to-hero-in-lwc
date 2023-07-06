@@ -1,0 +1,33 @@
+<template>
+    <lightning-card  title="Two way data binding">
+        <div class="slds-var-m-around_small">
+        <div >My fullname is {fullName}</div>
+        <lightning-input  type="text" label = "Enter age:" onkeyup= {changeHandler}></lightning-input>
+        <div >{fullName}'s age is {age}</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="without @track demo --> using ... operator">
+        <div class="slds-var-m-around_small">
+        <div >My fullname is {fullName}</div>
+        <div >My skill level in: </div>
+        <div>Music: {skillLevels.music}</div>
+        <lightning-input  type="text" label = "Enter the skill level in music:" onkeyup= {changeHandlerMusic}></lightning-input>
+        <div>Dance: {skillLevels.dance}</div>
+        <lightning-input  type="text" label = "Enter the skill level in dance:" onkeyup= {changeHandlerDance}></lightning-input>
+        <div>Art: {skillLevels.art}</div>
+        <lightning-input  type="text" label = "Enter the skill level in art:" onkeyup= {changeHandlerArt}></lightning-input>
+        </div>
+    </lightning-card>
+
+    <lightning-card  title="Getters --> Two way binding with Arrays ">
+        <div class="slds-var-m-around_small">
+        <div >My fullname is {fullName}</div>
+        <div >My likes are: </div>
+        <div>1. {firstLike}</div>
+        <div>2. {secondLike}</div>
+        <div>3. {thirdLike}</div>
+        <div>My percentage of marks is: {percentageOfMarks} %</div>
+        </div>
+    </lightning-card>
+</template>

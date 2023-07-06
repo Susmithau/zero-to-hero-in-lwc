@@ -1,0 +1,17 @@
+h1{    /*This will not apply to h1 of child*/
+    font-size: 30px;
+    color: hotpink;
+}
+
+/*Styling host element, i.e.,child component tag and not to the h1 tag of child*/
+/*The below styling for child can be achieved from child as well with a cssChildDemo.css file*/
+c-css-child-demo{  
+    display: block;
+    background-color: aquamarine;
+    color: rgb(3, 106, 23);
+}
+
+/*The below will apply css to p tags of child-> only from parent*/
+p{
+    color: rgb(255, 98, 0);
+}

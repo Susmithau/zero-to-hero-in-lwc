@@ -1,0 +1,6 @@
+@import 'c/sharedCssLibrary';
+
+.html{
+    width: 90%;
+    background-color: rgb(39, 155, 249);
+}

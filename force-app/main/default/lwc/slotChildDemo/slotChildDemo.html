@@ -1,0 +1,13 @@
+<template>
+    <div>Who are you?</div>
+    <!-- The answer to the above question must come from parent, so use slot as shown below -->
+    <!-- The below line says that something will come from parent, between the below slot -->
+    <!-- <div><slot></slot></div> Unnamed slots-> cannot have multiple unnamed slots-> therefore name them -->
+    <div><slot name="firstSlot"></slot></div> <!-- named slots> -->
+    <div>Who is your parent?</div>
+    <div><slot name="secondSlot"></slot></div> <!-- named slots> -->
+    <!-- If you want footer to be shown in one case and hidden for the other case, use the below code -->
+    <footer class="slds-card__footer slds-hide">
+        <slot name="footer" onslotchange={handleFooterChange}></slot>
+    </footer>
+</template>

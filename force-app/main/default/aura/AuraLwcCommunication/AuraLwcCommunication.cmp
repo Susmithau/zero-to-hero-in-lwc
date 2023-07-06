@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+<aura:attribute name="message" type="String"/> <!--'msg' from lwc event is bound to 'v.message' -->
+    <lightning:card title="Aura to LWC Communication">
+        <div class="slds-var-p-around_medium">
+            <div>{!v.message}</div>   <!-- To display the view => use '!v.' -->
+        </div>
+
+        <div class="slds-var-m-around_medium">
+            <!-- To display a method from .js => use '!c.' -->
+            <c:lwcAuraCommunication title="Title from Aura" onsendmsg="{!c.sendMsgHandler}"></c:lwcAuraCommunication>  <!-- embedding the lwc component -->
+        </div>
+    </lightning:card>
+</aura:component>	

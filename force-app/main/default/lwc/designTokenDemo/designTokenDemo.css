@@ -1,0 +1,12 @@
+div{
+    color: blue;
+    font-size: 15px;
+    background-color: rgb(141, 238, 247);
+}
+
+/* Instead of hard-coding the name of the color like above-> go for design token names like shown below */
+div:hover{
+    color: var(--lwc-brandAccessible);
+    font-size: 30px;
+    background-color: var(--lwc-brandPrimaryTransparent);
+}

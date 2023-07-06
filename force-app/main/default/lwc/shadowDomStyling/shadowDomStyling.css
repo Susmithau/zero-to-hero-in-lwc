@@ -1,0 +1,5 @@
+/* Trying to apply below ppts to a standard lightning button in shadow DOM->these won't get applied  */
+.btn{
+    background: rgb(255, 192, 235);
+    color: #b3065c;
+}

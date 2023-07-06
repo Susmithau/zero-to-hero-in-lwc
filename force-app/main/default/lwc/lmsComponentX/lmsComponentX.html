@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="LWC LMS Component X">
+        <div class="slds-grid">
+            <div class="slds-col slds-p-horizontal_medium">
+              <lightning-button label="Unsubscribe" onclick={unsubscribeMessage}></lightning-button>
+            </div>
+            <div class="slds-col slds-p-horizontal_medium">
+                <lightning-button label="Subscribe Again?" onclick={subscribeAgain}></lightning-button>
+            </div>
+        </div>
+
+        <div class="slds-var-m-around_medium">
+            Message Received: <strong>{receivedMessage}</strong>
+        </div>
+    </lightning-card>
+</template>

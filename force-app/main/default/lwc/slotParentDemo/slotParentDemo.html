@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Slot Demo -> Parent">
+        <div class="slds-var-p-around_medium">
+            <c-slot-child-demo>
+                <!-- Within these child tags goes the message to child and occupies the slots -->
+                <p class="slds-text-color_success" slot="firstSlot">I am Slot Child</p>  
+                <p class="slds-text-color_error" slot="secondSlot">Slot Parent</p> 
+                <p slot="footer">I am footer</p> <!--Footer displayed -->
+            </c-slot-child-demo>
+        </div>
+
+        <div class="slds-var-p-around_medium">
+            <c-slot-child-demo>
+                <!-- Within these child tags goes the message to child and occupies the slots -->
+                <p class="slds-text-color_success" slot="firstSlot">I am Slot Child</p>  
+                <p class="slds-text-color_error" slot="secondSlot">Slot Parent</p> 
+                <!-- <p slot="footer">I am footer</p>-->   <!--Footer hidden -->
+            </c-slot-child-demo>
+        </div>
+    </lightning-card>
+</template>

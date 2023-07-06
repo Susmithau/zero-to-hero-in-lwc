@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="CSS Composition">
+        <div class="slds-var-p-around_medium">
+            <h1>I am CSS Parent component</h1>
+            <c-css-child-demo>
+                <p>Slot One</p>
+            </c-css-child-demo>  <!-- host element -->
+            <c-css-child-demo class="childTwo">
+                <p>Slot Two</p>
+            </c-css-child-demo>  <!-- say there's another child -->
+        </div>
+    </lightning-card>
+</template>

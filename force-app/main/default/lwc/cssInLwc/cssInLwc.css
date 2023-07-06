@@ -1,0 +1,12 @@
+p{
+    color: green;
+    font-size: medium;
+}
+.ext{
+    color: blueviolet;
+    font-size: larger;
+}
+.ext:hover{
+    color: hotpink;
+    font-size: xx-large;
+}
